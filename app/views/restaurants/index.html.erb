@@ -1,0 +1,8 @@
+<h1>All our restaurants</h1>
+
+<%= link_to 'Add a new restaurant', new_restaurant_path, class: 'btn btn-primary my-3' %>
+<div class='cards'>
+  <% @restaurants.each do |restaurant| %>
+    <%= render 'card', restaurant: restaurant %>
+  <% end %>
+</div>
