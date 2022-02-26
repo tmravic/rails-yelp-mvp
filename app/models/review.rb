@@ -4,7 +4,7 @@ class Review < ApplicationRecord
 
   # validations
   validates :content, presence: true
-  validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }
+  validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5, message: "must be 5 or less" }
 end
 
 # A review must have content and a rating.
