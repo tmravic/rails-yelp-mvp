@@ -4,6 +4,8 @@ class Restaurant < ApplicationRecord
   validates :name, presence: true
   validates :address, presence: true
   validates :category, inclusion: { in: CATEGORIES }
+  has_one_attached :photo, dependent: :destroy
+  validates :photo, content_type: [:png, :jpg, :jpeg]
 
   # associations
   has_many :reviews, dependent: :destroy

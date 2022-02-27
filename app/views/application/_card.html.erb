@@ -1,5 +1,7 @@
 <div class="card-product">
-  <img src="https://loremflickr.com/320/240/restaurant">
+  <% if restaurant.photo.attached? %>
+    <%= image_tag restaurant.photo %>
+  <% end %>
   <div class="card-product-infos">
     <h2><%= restaurant.name %></h2>
     <p><%= restaurant.address %></p>
