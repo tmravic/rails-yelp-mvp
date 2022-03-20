@@ -17,7 +17,7 @@ bundle install
 <p>2. Go to the S3 Management Console and a create a bucket with a name similar to "rails-yelp-mvp-pics" (the exact same name cannot be used)</p>
 <p>3. Once in your bucket's settings page, in the Permissions tab, make sure Block all public access is OFF</p>
 <p>4. Navigate to the IAM dashboard, click the button Add users to create a user called "aws-rails-s3-user"</p>
-<p>5. On the left sidebar choose Policies and create a new policy called "aws-rails-s3-policy" with this JSON</p>
+<p>5. On the left sidebar choose Policies and create a new policy called "aws-rails-s3-policy" with this JSON, execpt put your bucket name instead of "rails-yelp-mvp-pics"</p>
 
 ```
 {
