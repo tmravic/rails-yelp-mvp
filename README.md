@@ -18,6 +18,7 @@ bundle install
 <p>3. Once in your bucket's settings page, in the Permissions tab, make sure Block all public access is OFF</p>
 <p>4. Navigate to the IAM dashboard, click the button Add users to create a user called "aws-rails-s3-user"</p>
 <p>5. On the left sidebar choose Policies and create a new policy called "aws-rails-s3-policy" with this JSON</p>
+
 ```
 {
     "Version": "2012-10-17",
