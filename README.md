@@ -38,6 +38,7 @@ bundle install
         }
     ]
 }
+
 ```
 <p>6. Click Add Permissions, Attach existing policies directly, find and add the "aws-rails-s3-policy" to "aws-rails-s3-user"</p>
 <p>7. Return to "aws-rails-s3-user" and find the Security Credentials tab. Create an Access Key ID and Secret Access Key, copy/paste them somewhere</p>
