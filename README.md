@@ -17,7 +17,8 @@ bundle install
 <p>2. Go to the S3 Management Console and a create a bucket with a name similar to "rails-yelp-mvp-pics" (the exact same name cannot be used)</p>
 <p>3. Once in your bucket's settings page, in the Permissions tab, make sure Block all public access is OFF</p>
 <p>4. Navigate to the IAM dashboard, click the button Add users to create a user called "aws-rails-s3-user"</p>
-<p>5. On the left sidebar choose Policies and create a new policy called "aws-rails-s3-policy" with this JSON</p>
+<p>5. On the left sidebar choose Policies and create a new policy called "aws-rails-s3-policy" with this JSON, execpt put your bucket name instead of "rails-yelp-mvp-pics"</p>
+
 ```
 {
     "Version": "2012-10-17",
@@ -38,14 +39,18 @@ bundle install
         }
     ]
 }
+
 ```
 <p>6. Click Add Permissions, Attach existing policies directly, find and add the "aws-rails-s3-policy" to "aws-rails-s3-user"</p>
 <p>7. Return to "aws-rails-s3-user" and find the Security Credentials tab. Create an Access Key ID and Secret Access Key, copy/paste them somewhere</p>
+
 ```
 EDITOR=nano rails credentials:edit
 ```
+
 <p>8. In your terminal write the above line and proceed to uncomment these lines and input the two keys</p>
 <p>9. In the root directory your project should have storage.yml, you will need to input the following</p>
+
 ```
 amazon:
   service: S3
@@ -54,6 +59,7 @@ amazon:
   bucket: "rails-yelp-mvp-pics" < PUT YOUR BUCKET'S NAME
   region: "ap-northeast-1"      < PUT YOUR REGION'S NAME
 ```
+
 <p>10. Look inside config/environments/development.rb and make sure you have `config.active_storage.service = :amazon`</p>
 <p>11. Also look inside config/environments/production.rb and make sure you have `config.active_storage.service = :amazon`</p>
 
